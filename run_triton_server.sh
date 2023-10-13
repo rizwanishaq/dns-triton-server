@@ -1,0 +1,1 @@
+docker run  --shm-size=1g --ulimit memlock=-1 --ulimit stack=67108864  --gpus '"device=0"' --rm -p8000:8000 -p8001:8001 -p8002:8002 -v//media/rizwanishaq/tertiary/denoiser_triton/models:/models triton-server tritonserver --model-repository=/models  --backend-config=tensorflow,version=2
